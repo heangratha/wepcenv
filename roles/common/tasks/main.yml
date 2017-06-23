@@ -1,0 +1,37 @@
+---
+
+- name: Add GPG signing key for docker
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add docker repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    state: present
+    filename: 'docker'
+
+- name: Packages | Ensure apt cache is up to date
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Packages | Install aptitude required by upgrade mode
+  apt:
+    name: aptitude
+
+- name: Packages | Make sure your system is up-to-date
+  apt:
+    upgrade: safe
+    state: latest
+
+- name: Packages | Install the required packages for development environment
+  apt:
+    pkg: '{{ item }}'
+  with_items: '{{ common_packages }}'
+
+- name: Install docker-compose
+  shell: curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+- name: Change docker-compse mode to executable
+  shell: chmod +x /usr/local/bin/docker-compose

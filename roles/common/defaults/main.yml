@@ -1,0 +1,25 @@
+---
+common_packages:
+  - apt-show-versions
+  - apt-transport-https
+  - bash
+  - ca-certificates
+  - curl
+  - cifs-utils
+  - docker-ce
+  - ecryptfs-utils
+  - software-properties-common
+  - htop
+  - libc-client2007e
+  - libc-client2007e-dev
+  - libpam-mount
+  - npm
+  - network-manager-openvpn-gnome
+  - network-manager-openvpn
+  - python-setuptools
+  - tree
+  - unattended-upgrades
+  - unzip
+  - vim
+  - wget
+  - zip
