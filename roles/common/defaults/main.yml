@@ -13,6 +13,8 @@ common_packages:
   - libc-client2007e
   - libc-client2007e-dev
   - libpam-mount
+  - libappindicator1
+  - libindicator7
   - npm
   - network-manager-openvpn-gnome
   - network-manager-openvpn
