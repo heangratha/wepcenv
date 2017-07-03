@@ -16,6 +16,11 @@
 
 	sudo apt-get install git ansible
 
+# Clone repository
+
+  ssh: git clone git@github.com:heangratha/wepcenv.git
+  https: git clone https://github.com/heangratha/wepcenv.git
+
 # Run ansible playbook to intall common packages require by Web Essentials
 
 	ansible-playbook -i "localhost," -c local playbook.yml --ask-become-pass
