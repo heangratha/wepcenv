@@ -10,7 +10,7 @@
 	sudo apt-get install software-properties-common
 	sudo add-apt-repository ppa:ondrej/php
 	sudo apt-add-repository ppa:ansible/ansible
-	sudo apt-ge update
+	sudo apt-get update
 
 # Install git ansible
 
