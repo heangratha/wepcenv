@@ -19,6 +19,7 @@
 # Clone repository
 
   ssh: git clone git@github.com:heangratha/wepcenv.git
+
   https: git clone https://github.com/heangratha/wepcenv.git
 
 # Run ansible playbook to intall common packages require by Web Essentials
