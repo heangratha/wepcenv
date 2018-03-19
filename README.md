@@ -26,4 +26,6 @@
 
 	ansible-playbook -i "localhost," -c local playbook.yml --ask-become-pass
 
+# Add User to Docker group
 
+	sudo usermod -aG docker {USER
