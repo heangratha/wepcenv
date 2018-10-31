@@ -16,7 +16,6 @@ common_packages:
   - libappindicator1
   - libindicator7
   - libreadline-dev
-  - npm
   - network-manager-openvpn-gnome
   - network-manager-openvpn
   - python-setuptools

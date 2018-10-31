@@ -7,15 +7,12 @@
 
 - name: Add docker repository
   apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable
+    repo: '{{ item }}'
     state: present
-    filename: 'docker'
-
-- name: Add php repository
-  apt_repository:
-    repo: deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main
-    state: present
-    filename: 'ondrej-ubuntu-php-xenial'
+  with_items:
+    - 'deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable'
+    - 'deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main'
+    - 'deb https://deb.nodesource.com/node_8.x bionic main'
 
 - name: Packages | Ensure apt cache is up to date
   apt:
@@ -31,13 +28,20 @@
     upgrade: safe
     state: latest
 
+- name: Install nodejs
+  apt:
+    pkg: nodejs
+
 - name: Packages | Install the required packages for development environment
   apt:
     pkg: '{{ item }}'
   with_items: '{{ common_packages }}'
 
 - name: Install docker-compose
-  shell: curl -L "https://github.com/docker/compose/releases/download/1.19.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  shell: curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 - name: Change docker-compse mode to executable
   shell: chmod +x /usr/local/bin/docker-compose
+
+- name: Add user to docker
+  shell: usermod -aG docker ${USER}
