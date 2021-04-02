@@ -51,3 +51,7 @@
 ### Install agent and choose no do not run config
 
     sudo apt install ocsinventory-agent
+
+### Run ocsagent add to server
+
+    sudo ocsinventory-agent
