@@ -3,13 +3,19 @@
 # Requirement
 
     - git
-    - ansible v2.3
+    - ansible v2.8
+
+# Add repository for bionic ubuntu 18.04 for install ansible 2.8
+
+    sudo vi /etc/apt/sources.list
+    deb http://security.ubuntu.com/ubuntu bionic-security main
 
 # Add require repository
 
     sudo apt-get install software-properties-common
     sudo add-apt-repository ppa:ondrej/php
-    sudo apt-add-repository ppa:ansible/ansible-2.3
+    curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    sudo apt-add-repository ppa:ansible/ansible-2.8
     sudo apt-get update
 
 # Install git ansible

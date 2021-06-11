@@ -10,6 +10,7 @@ common_packages:
   - ecryptfs-utils
   - software-properties-common
   - htop
+  - imagemagick
   - libc-client2007e
   - libc-client2007e-dev
   - libpam-mount
@@ -18,6 +19,7 @@ common_packages:
   - libreadline-dev
   - network-manager-openvpn-gnome
   - network-manager-openvpn
+  - nodejs
   - python-setuptools
   - tree
   - unattended-upgrades
@@ -25,30 +27,7 @@ common_packages:
   - vim
   - wget
   - zip
-  - php5.6-cli
-  - php5.6-common
-  - php5.6-gd
-  - php5.6-intl
-  - php5.6-json
-  - php5.6-ldap
-  - php5.6-mbstring
-  - php5.6-mcrypt
-  - php5.6-xml
-  - php5.6-xmlrpc
-  - php5.6-xsl
-  - php5.6-zip
-  - php7.0-cli
-  - php7.0-common
-  - php7.0-gd
-  - php7.0-intl
-  - php7.0-json
-  - php7.0-ldap
-  - php7.0-mbstring
-  - php7.0-mcrypt
-  - php7.0-xml
-  - php7.0-xmlrpc
-  - php7.0-xsl
-  - php7.0-zip
+  - php-imagick
   - php7.1-cli
   - php7.1-common
   - php7.1-gd
@@ -57,7 +36,40 @@ common_packages:
   - php7.1-ldap
   - php7.1-mbstring
   - php7.1-mcrypt
+  - php7.1-mysql
+  - php7.1-opcache
+  - php7.1-tidy
   - php7.1-xml
   - php7.1-xmlrpc
   - php7.1-xsl
   - php7.1-zip
+  - php7.2-cli
+  - php7.2-curl
+  - php7.2-common
+  - php7.2-gd
+  - php7.2-intl
+  - php7.2-json
+  - php7.2-ldap
+  - php7.2-mbstring
+  - php7.2-mysql
+  - php7.2-opcache
+  - php7.2-tidy
+  - php7.2-xml
+  - php7.2-xmlrpc
+  - php7.2-xsl
+  - php7.2-zip
+  - php7.4-cli
+  - php7.4-curl
+  - php7.4-common
+  - php7.4-gd
+  - php7.4-intl
+  - php7.4-json
+  - php7.4-ldap
+  - php7.4-mbstring
+  - php7.4-mysql
+  - php7.4-opcache
+  - php7.4-tidy
+  - php7.4-xml
+  - php7.4-xmlrpc
+  - php7.4-xsl
+  - php7.4-zip
