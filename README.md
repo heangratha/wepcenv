@@ -20,7 +20,7 @@
 
 # Install git ansible
 
-    sudo apt-get install git ansible
+    sudo apt-get install git ansible=2.8.20-1ppa~bionic
 
 # Clone repository
 
