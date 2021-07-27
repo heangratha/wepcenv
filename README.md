@@ -1,4 +1,4 @@
-# wepcenv
+# wepcenv for Ubuntu 20.04
 
 ## Requirement
 
@@ -20,7 +20,7 @@
 
 # Install git ansible
 
-    sudo apt-get install git ansible=2.8.20-1ppa~bionic
+    sudo apt-get install git ansible=2.8.20-1ppa~focal
 
 # Clone repository
 

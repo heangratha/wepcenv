@@ -12,8 +12,7 @@
     repo: '{{ item }}'
     state: present
   with_items:
-    - 'deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable'
-    - 'deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main'
+    - 'deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable'
 
 - name: Packages | Ensure apt cache is up to date
   apt:
