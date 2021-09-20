@@ -19,18 +19,10 @@
     update_cache: yes
     cache_valid_time: 3600
 
-- name: Packages | Install aptitude required by upgrade mode
-  apt:
-    name: aptitude
-
 - name: Packages | Make sure your system is up-to-date
   apt:
     upgrade: safe
     state: latest
-
-- name: Install nodejs
-  apt:
-    pkg: nodejs
 
 - name: Packages | Install the required packages for development environment
   apt:
