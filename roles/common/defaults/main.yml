@@ -13,7 +13,7 @@ common_packages:
   - libc-client2007e
   - libc-client2007e-dev
   - libpam-mount
-  - libappindicator1
+  - libindicator7
   - libreadline-dev
   - network-manager-openvpn-gnome
   - network-manager-openvpn
@@ -30,7 +30,6 @@ common_packages:
   - php8.3-common
   - php8.3-gd
   - php8.3-intl
-  - php8.3-json
   - php8.3-ldap
   - php8.3-mbstring
   - php8.3-mysql
