@@ -1,0 +1,31 @@
+---
+
+php_versions:
+  - php8.2
+  - php8.3
+  - php8.4
+
+php_packages:
+  - bz2
+  - cgi
+  - cli
+  - common
+  - curl
+  - gd
+  - imagick
+  - intl
+  - ldap
+  - mbstring
+  - mcrypt
+  - memcache
+  - memcached
+  - mongodb
+  - mysql
+  - opcache
+  - pgsql
+  - readline
+  - sqlite3
+  - xml
+  - xmlrpc
+  - xsl
+  - zip

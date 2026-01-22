@@ -1,0 +1,15 @@
+---
+
+- name: PHP | Add repository
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+
+- name: PHP | Install
+  apt:
+    name: '{{ item[0] }}-{{ item[1] }}'
+  with_nested:
+    - '{{ php_versions }}'
+    - '{{ php_packages }}'
+
+- name: Install PHP Composer
+  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --2

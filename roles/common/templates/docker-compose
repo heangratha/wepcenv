@@ -1,0 +1,4 @@
+#!/bin/bash
+action=$*
+
+/usr/bin/docker compose ${action}
