@@ -1,6 +1,9 @@
 ---
 
 - hosts: localhost
+  become: true
   roles:
     - role: common
-      become: true
+      tags: common
+    - role: php
+      tags: php

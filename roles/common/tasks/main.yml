@@ -3,11 +3,17 @@
 - name: Install Docker
   shell: curl -L https://get.docker.com | sh
 
-- name: Install Docker Compose
-  template:
-    src: docker-compose
-    dest: /usr/local/bin/docker-compose
-    mode: '0755'
+- name: Install docker-compose
+  shell: curl -L https://github.com/docker/compose/releases/download/v5.0.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+
+- name: Change docker-compose mode to executable
+  shell: chmod +x /usr/local/bin/docker-compose
+
+- name: Install kubectl
+  shell: curl -L "https://dl.k8s.io/release/v1.35.0/bin/linux/amd64/kubectl" -o /usr/local/bin/kubectl
+
+- name: Change kubectl mode to executable
+  shell: chmod +x /usr/local/bin/kubectl
 
 - name: Packages | Ensure apt cache is up to date
   apt:
@@ -23,12 +29,3 @@
   apt:
     pkg: '{{ item }}'
   with_items: '{{ common_packages }}'
-
-- name: Install kubectl
-  shell: curl -L "https://dl.k8s.io/release/v1.35.0/bin/linux/amd64/kubectl" -o /usr/local/bin/kubectl
-
-- name: Change kubectl mode to executable
-  shell: chmod +x /usr/local/bin/kubectl
-
-- name: Add user to docker
-  shell: usermod -aG docker ${USER}
